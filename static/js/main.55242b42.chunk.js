@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-2-feedback"]=this["webpackJsonpreact-2-feedback"]||[]).push([[0],{11:function(e,t,c){"use strict";c.r(t);var n=c(1),r=c.n(n),a=c(3),s=c.n(a),i=(c(8),c(9),c(0));var o=function(){return Object(i.jsx)("div",{className:"App"})};s.a.render(Object(i.jsx)(r.a.StrictMode,{children:Object(i.jsx)(o,{})}),document.getElementById("root"))},8:function(e,t,c){},9:function(e,t,c){}},[[11,1,2]]]);
+//# sourceMappingURL=main.55242b42.chunk.js.map
