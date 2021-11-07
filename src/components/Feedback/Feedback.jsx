@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
-import s from './Feedback.module.css';
-import PropTypes from 'prop-types';
 import { Statistics } from 'components/Statistics/Statistics';
 import feedbackTypes from 'data/feedbackTypes.json';
 import { Section } from 'components/Section/Section';
@@ -22,27 +20,6 @@ class Feedback extends Component {
     this.setState({
       [option]: this.state[option] + this.props.step,
     });
-  };
-
-  handleIncrementGood = e => {
-    console.log('Increment button was clicked', e);
-    this.setState((state, props) => ({
-      good: state.good + props.step,
-    }));
-  };
-
-  handleIncrementNeutral = e => {
-    console.log('Increment button was clicked', e);
-    this.setState((state, props) => ({
-      neutral: state.neutral + props.step,
-    }));
-  };
-
-  handleIncrementBad = e => {
-    console.log('Increment button was clicked', e);
-    this.setState((state, props) => ({
-      bad: state.bad + props.step,
-    }));
   };
 
   countTotalFeedback() {
@@ -71,10 +48,7 @@ class Feedback extends Component {
         <Section title="Please leave your feedback" className="Feedback">
           <FeedbackOptions
             options={feedbackTypes}
-            incrementFunc={this.handleIncrementGood}
-            incrNeutral={this.handleIncrementNeutral}
-            incrBad={this.handleIncrementBad}
-            // incrementFunc={this.handleIncrement}
+            incrementFunc={this.handleIncrement}
           />
         </Section>
         <Section title="Statistics" className="Statistics__heading">

@@ -1,17 +1,17 @@
 [{
-    "value": "Good",
+    "value": "good",
     "color": "green",
     "id": "id-1"
 },
 {
-    "value": "Neutral",
+    "value": "neutral",
     "color": "blue",
     "id": "id-2"
 
 
 },
 {
-    "value": "Bad",
+    "value": "bad",
     "color": "red",
     "id": "id-3"
 

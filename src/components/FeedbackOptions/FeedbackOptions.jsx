@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import s from './FeedbackOptions.module.css';
 
@@ -9,8 +10,7 @@ const FeedbackOptions = ({ options, incrementFunc }) => (
         <li
           key={id}
           className={s.FeedbackOptions__item}
-          onClick={incrementFunc}
-          //   onClick={() => incrementFunc(value)}
+          onClick={() => incrementFunc(value)}
         >
           <button
             type="button"
@@ -21,38 +21,15 @@ const FeedbackOptions = ({ options, incrementFunc }) => (
         </li>
       );
     })}
-
-    {/* <li
-      key="id-1"
-      data-name="good"
-      className={s.FeedbackOptions__item}
-      onClick={incrGood}
-    >
-      <button type="button" className={(s.FeedbackOptions__button, s.green)}>
-        Good
-      </button>
-    </li>
-    <li
-      key="id-2"
-      data-name="neutral"
-      className={s.FeedbackOptions__item}
-      onClick={incrNeutral}
-    >
-      <button type="button" className={(s.FeedbackOptions__button, s.blue)}>
-        Neutral
-      </button>
-    </li>
-    <li
-      key="id-3"
-      data-name="bad"
-      className={s.FeedbackOptions__item}
-      onClick={incrBad}
-    >
-      <button type="button" className={(s.FeedbackOptions__button, s.red)}>
-        Bad
-      </button>
-    </li> */}
   </ul>
 );
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.array.isRequired,
+  incrementFunc: PropTypes.func,
+  color: PropTypes.string,
+  id: PropTypes.string,
+  value: PropTypes.string,
+};
 
 export { FeedbackOptions };

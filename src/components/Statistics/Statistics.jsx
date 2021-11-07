@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Notification } from 'components/Notification/Notification';
+import PropTypes from 'prop-types';
 
 import s from './Statistics.module.css';
 
@@ -32,5 +33,13 @@ function Statistics({ good, bad, neutral, total, positivePercentage }) {
     </>
   );
 }
+
+Statistics.propTypes = {
+  good: PropTypes.number,
+  bad: PropTypes.number,
+  neutral: PropTypes.number,
+  total: PropTypes.number,
+  positivePercentage: PropTypes.number,
+};
 
 export { Statistics };
