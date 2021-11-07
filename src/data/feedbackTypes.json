@@ -1,0 +1,20 @@
+[{
+    "value": "Good",
+    "color": "green",
+    "id": "id-1"
+},
+{
+    "value": "Neutral",
+    "color": "blue",
+    "id": "id-2"
+
+
+},
+{
+    "value": "Bad",
+    "color": "red",
+    "id": "id-3"
+
+
+}
+]

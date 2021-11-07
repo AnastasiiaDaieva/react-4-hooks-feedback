@@ -1,0 +1,36 @@
+/* feedback item module
+
+@value neutral-color, good-color, bad-color from '../../theme/colors.module.css';
+
+.FeedbackOptions__button {
+  font-family: 'Montserrat', sans-serif;
+
+  border-radius: 3px;
+  border: 1px solid rgb(204, 204, 204);
+  padding: 3px 5px;
+}
+.FeedbackOptions__item {
+  transition: transform 250ms linear;
+}
+.FeedbackOptions__item:hover {
+  transform: scale(1.05);
+}
+
+.FeedbackOptions__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.blue {
+  composes: FeedbackOptions__button;
+  background-color: neutral-color;
+}
+
+.green {
+  composes: FeedbackOptions__button;
+  background-color: good-color;
+}
+
+.red {
+  composes: FeedbackOptions__button;
+  background-color: bad-color;
+} */

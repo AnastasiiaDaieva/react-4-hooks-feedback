@@ -1,0 +1,9 @@
+.Statistics {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.Statistics__list {
+  list-style: none;
+}
