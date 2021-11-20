@@ -3,26 +3,28 @@ import PropTypes from 'prop-types';
 
 import s from './FeedbackOptions.module.css';
 
-const FeedbackOptions = ({ options, incrementFunc }) => (
-  <ul className={s.FeedbackOptions__list}>
-    {options.map(({ color, id, value }) => {
-      return (
-        <li
-          key={id}
-          className={s.FeedbackOptions__item}
-          onClick={() => incrementFunc(value)}
-        >
-          <button
-            type="button"
-            className={(s.FeedbackOptions__button, s[color])}
+function FeedbackOptions({ options, incrementFunc }) {
+  return (
+    <ul className={s.FeedbackOptions__list}>
+      {options.map(({ color, id, value }) => {
+        return (
+          <li
+            key={id}
+            className={s.FeedbackOptions__item}
+            onClick={() => incrementFunc(value)}
           >
-            {value}
-          </button>
-        </li>
-      );
-    })}
-  </ul>
-);
+            <button
+              type="button"
+              className={(s.FeedbackOptions__button, s[color])}
+            >
+              {value}
+            </button>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
 
 FeedbackOptions.propTypes = {
   options: PropTypes.array.isRequired,
